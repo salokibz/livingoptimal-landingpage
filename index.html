@@ -248,7 +248,7 @@ h4 {
   accent-color: var(--p-700);
   cursor: pointer;
 }
-.consent-block a { color: var(--p-600); text-decoration: underline; white-space: nowrap; }
+.consent-block a { color: var(--p-600); text-decoration: underline; }
 
 /* ─────────────────────────────────────────
    SCROLL REVEAL
@@ -859,6 +859,85 @@ h4 {
 }
 .svc-text h4 { color: var(--p-800); font-size: 15px; font-weight: 600; margin-bottom: 6px; }
 .svc-text p { font-size: 13px; color: var(--text-3); line-height: 1.6; }
+
+/* ─────────────────────────────────────────
+   HOW WE WORK — modalities
+   ───────────────────────────────────────── */
+.modalities {
+  padding: var(--section) 0;
+  background: var(--p-50);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.modalities-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.modalities-header .label { margin-bottom: 12px; }
+.modalities-header h2 { margin-bottom: 14px; }
+.modalities-header p {
+  font-size: 17px;
+  color: var(--text-2);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+.mod-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.mod-card {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  padding: 28px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: box-shadow .2s, transform .2s;
+}
+.mod-card:hover {
+  box-shadow: 0 6px 24px rgba(53,12,144,.09);
+  transform: translateY(-2px);
+}
+.mod-tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--p-600);
+  background: var(--p-50);
+  border: 1px solid var(--p-100);
+  padding: 3px 10px;
+  border-radius: 100px;
+  align-self: flex-start;
+}
+.mod-card h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--p-800);
+  margin: 0;
+}
+.mod-card p {
+  font-size: 13.5px;
+  color: var(--text-2);
+  line-height: 1.65;
+  margin: 0;
+}
+.mod-card-helps {
+  font-size: 12px;
+  color: var(--text-3);
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+.mod-card-helps svg { flex-shrink: 0; margin-top: 2px; color: var(--leaf); }
+
+@media (max-width: 1020px) { .mod-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 580px)  { .mod-grid { grid-template-columns: 1fr; } }
 
 /* ─────────────────────────────────────────
    THERAPISTS — horizontal card grid
@@ -1516,7 +1595,7 @@ h4 {
         <div class="consent-block">
           <label>
             <input type="checkbox" required id="hf-privacy">
-            I agree to the <a href="https://livingoptimallytherapy.com/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://livingoptimallytherapy.com/terms-and-conditions" target="_blank" rel="noopener">Terms of Service</a><span style="color:var(--p-600)"> *</span>
+            I accept the <a href="https://livingoptimallytherapy.com/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a> &amp; <a href="https://livingoptimallytherapy.com/terms-and-conditions" target="_blank" rel="noopener">Terms of Service</a><span style="color:var(--p-600)"> *</span>
           </label>
           <label>
             <input type="checkbox" id="hf-sms">
@@ -1655,7 +1734,7 @@ h4 {
     </div>
 
     <div class="process-cta sr">
-      <a href="https://livingoptimallytherapy.com/contact-living-optimally#contact" target="_blank" rel="noopener" class="btn-purple">Book Your Free 30-min Phone Consult</a>
+      <a href="https://livingoptimallytherapy.com/contact-living-optimally#contact" target="_blank" rel="noopener" class="btn-purple">Book Your Free 15-min Phone Consult</a>
       <p class="process-trust">
         Private
         <span class="pt-dot">•</span>
@@ -1828,6 +1907,66 @@ h4 {
           <h4>Telehealth</h4>
           <p>Secure video sessions licensed in NJ, New York &amp; Connecticut</p>
         </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     HOW WE WORK
+     ══════════════════════════════════════ -->
+<section class="modalities" id="approach" aria-labelledby="mod-h2">
+  <div class="wrap">
+
+    <div class="modalities-header sr">
+      <p class="label">How we actually work</p>
+      <h2 id="mod-h2">Evidence-based approaches, explained in plain English.</h2>
+      <p>Every therapist at Living Optimally draws from proven methods — matched to what you're actually dealing with, not just one-size-fits-all talk therapy.</p>
+    </div>
+
+    <div class="mod-grid">
+
+      <div class="mod-card sr">
+        <span class="mod-tag">CBT</span>
+        <h4>Cognitive Behavioral Therapy</h4>
+        <p>Identifies the thought patterns driving anxiety, depression, or stress — and teaches you to interrupt and reframe them. Structured, skills-based, and usually time-limited.</p>
+        <p class="mod-card-helps">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+          Best for: anxiety, depression, OCD, panic, ADHD, negative self-talk
+        </p>
+      </div>
+
+      <div class="mod-card sr" style="transition-delay:.06s">
+        <span class="mod-tag">DBT</span>
+        <h4>Dialectical Behavior Therapy</h4>
+        <p>Builds four core skills: mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness. Particularly powerful when emotions feel overwhelming or uncontrollable.</p>
+        <p class="mod-card-helps">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+          Best for: emotional intensity, self-harm, relationship conflict, trauma
+        </p>
+      </div>
+
+      <div class="mod-card sr" style="transition-delay:.12s">
+        <span class="mod-tag">ACT</span>
+        <h4>Acceptance &amp; Commitment Therapy</h4>
+        <p>Instead of fighting difficult feelings, ACT helps you accept them without being controlled by them — then take meaningful action aligned with your values, even when things are hard.</p>
+        <p class="mod-card-helps">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+          Best for: burnout, chronic anxiety, grief, life transitions, avoidance
+        </p>
+      </div>
+
+      <div class="mod-card sr" style="transition-delay:.18s">
+        <span class="mod-tag">Trauma-informed</span>
+        <h4>Trauma-Informed Care</h4>
+        <p>A lens applied across all our work — recognizing how past experiences shape present behavior. Creates a safe, non-judgmental space before any deeper processing begins.</p>
+        <p class="mod-card-helps">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+          Best for: PTSD, childhood trauma, domestic violence survivors, grief
+        </p>
       </div>
 
     </div>
@@ -2140,7 +2279,7 @@ h4 {
         <div class="consent-block">
           <label>
             <input type="checkbox" required id="ff-privacy">
-            I agree to the <a href="https://livingoptimallytherapy.com/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://livingoptimallytherapy.com/terms-and-conditions" target="_blank" rel="noopener">Terms of Service</a><span style="color:var(--p-600)"> *</span>
+            I accept the <a href="https://livingoptimallytherapy.com/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a> &amp; <a href="https://livingoptimallytherapy.com/terms-and-conditions" target="_blank" rel="noopener">Terms of Service</a><span style="color:var(--p-600)"> *</span>
           </label>
           <label>
             <input type="checkbox" id="ff-sms">
